@@ -1,0 +1,11 @@
+pipelines:
+  default:
+    - step:
+        name: Playwright Tests
+        image: mcr.microsoft.com/playwright:v1.33.0-focal
+        script:
+          - npm ci        
+          # - Run the test cases 
+          - npx playwright test
+        artifacts:
+         - playwright-report/index.html

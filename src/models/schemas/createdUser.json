@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "role": {
+            "type": "string"
+        },
+        "createdAt": {
+            "type": "string"
+        },
+        "idAzure": {
+            "type": "string"
+        },
+        "uuid": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name",
+        "email",
+        "role",
+        "createdAt",
+        "idAzure",
+        "uuid"
+    ]
+}

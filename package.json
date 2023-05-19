@@ -1,0 +1,26 @@
+{
+  "name": "caas_qa_backend",
+  "version": "1.0.0",
+  "description": "QA Automation Framework for CaaS API testing",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "start": "node index.js",
+    "test:dev": "test_env=development npx playwright test",
+    "test:stg": "test_env=staging npx playwright test",
+    "repeat": "test_env=development npx playwright test --repeat-each 15 --workers=1",
+    "qase": "QASE_REPORT=1 test_env=development npx playwright test",
+    "qase_repeat": "QASE_REPORT=1 test_env=development npx playwright test --repeat-each 15 --workers=1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.33.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "ajv": "^8.12.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.40.0",
+    "playwright-qase-reporter": "^1.2.0-alpha.5"
+  }
+}
